@@ -10,6 +10,7 @@
   	<version>0.8</version>
 	<description>PLG_CONTENT_MYTAGS_XML_DESCRIPTION</description>
 	<files>
+		<filename plugin="mytags">README.md</filename>
 		<filename plugin="mytags">mytags.php</filename>
 		<filename>index.html</filename>
 	</files>
