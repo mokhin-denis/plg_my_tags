@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content">
+	<name>plg_content_mytags</name>
+	<author>Denis E Mokhin</author>
+	<authorUrl>http://my-j.ru</authorUrl>
+	<creationDate>August 2008</creationDate>
+	<copyright>Copyright (C) 2008-2013 my-j.ru - All rights reserved.</copyright>
+	<license>GNU GPL, see http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<authorEmail>denis@my-j.ru</authorEmail>
+  	<version>0.8</version>
+	<description>PLG_CONTENT_MYTAGS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="mytags">mytags.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="ru-RU">ru-RU/ru-RU.plg_content_mytags.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_content_mytags.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_mytags.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_content_mytags.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			<field name="place" type="list" default="1" 
+				label="PLG_CONTENT_MYTAGS_PLACE_LABEL"
+				description="PLG_CONTENT_MYTAGS_PLACE_DESC"
+			>
+				<option value="0">PLG_CONTENT_MYTAGS_AFTER_TITLE</option>
+				<option value="1">PLG_CONTENT_MYTAGS_AFTER_CONTENT</option>
+			</field>
+			<field name="using_component" type="list" default="0"
+				label="PLG_CONTENT_MYTAGS_USING_COMPONENT_LABEL"
+				description="PLG_CONTENT_MYTAGS_USING_COMPONENT_DESC"
+			>
+				<option value="0">PLG_CONTENT_MYTAGS_COM_SEARCH</option>
+				<option value="1">PLG_CONTENT_MYTAGS_COM_FINDER</option>
+			</field>		
+			<field name="sep"  type="text" default="," size="5"
+				label="PLG_CONTENT_MYTAGS_SEPARATOR_LABEL" 
+				description="PLG_CONTENT_MYTAGS_SEPARATOR_DESC" 
+			/>
+			<field name="add_space_after_sep" type="list" default="0"
+				label="PLG_CONTENT_MYTAGS_ADD_END_SPACE_LABEL"
+				description="PLG_CONTENT_MYTAGS_ADD_END_SPACE_DESC"
+			>
+				<option value="0">PLG_CONTENT_MYTAGS_DO_NOT_ADD_SPACE</option>
+				<option value="1">PLG_CONTENT_MYTAGS_ADD_SPACE_AFTER</option>
+			</field>		
+			<field name="add_nofollow" type="list" default="0"
+				label="PLG_CONTENT_MYTAGS_ADD_NOFOLLOW_LABEL"
+				description="PLG_CONTENT_MYTAGS_ADD_NOFOLLOW_DESC"
+			>
+				<option value="0">PLG_CONTENT_MYTAGS_DO_NOT_ADD</option>
+				<option value="1">PLG_CONTENT_MYTAGS_ADD_NOFOLLOW_PARAM</option>
+			</field>		
+			<field name="limit"  type="text" default="0" size="2"
+				label="PLG_CONTENT_MYTAGS_LIMIT_LABEL"
+				description="PLG_CONTENT_MYTAGS_LIMIT_DESC"
+			/> 				
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="extension" name="MyTags Updates">http://downloads.my-j.ru/mytags.xml</server>
+	</updateservers>
+</extension>
