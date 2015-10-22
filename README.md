@@ -9,6 +9,8 @@ Easy to use and easy to configure.
 3. Make base settings of plug-in, using Extensions - Plug-in Manager.
 4. Activate plug-in
 
+Then, you must fill meta-keyword field of your articles. After that you will see your keywords as tags.
+
 ## Example
 You have http://mysite.com site. Standard login to admin panel is http://mysite.com/administrator. When you install and activate AskMy plug-in for correct login you should use this link: http://mysite.com/administrator/?keyname=keyvalue
 
