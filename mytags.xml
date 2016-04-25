@@ -7,7 +7,7 @@
 	<copyright>Copyright (C) 2008-2016 Denis Mokhin - All rights reserved.</copyright>
 	<license>GNU GPL, see http://www.gnu.org/licenses/gpl-2.0.html</license>
 	<authorEmail>denis@mokhin-tech.ru</authorEmail>
-  	<version>0.9</version>
+  	<version>0.10</version>
 	<description>PLG_CONTENT_MYTAGS_XML_DESCRIPTION</description>
 	<files>
 		<filename plugin="mytags">README.md</filename>
