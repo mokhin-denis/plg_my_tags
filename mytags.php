@@ -3,7 +3,7 @@
 *
 * MyTags shows tags for article, taking them from keywords of article
 *
-* Copyright (C) 2008-2015 Denis Mokhin. All rights reserved. 
+* Copyright (C) 2008-2016 Denis Mokhin. All rights reserved. 
 *
 * Author is:
 * Denis Mokhin < denis@mokhin-tech.ru >

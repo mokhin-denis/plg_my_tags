@@ -14,8 +14,5 @@ You can improve current translation or add new languages. Please visit [transife
 
 Then, you must fill meta-keyword field of your articles. After that you will see your keywords as tags.
 
-## Example
-You have http://mysite.com site. Standard login to admin panel is http://mysite.com/administrator. When you install and activate AskMy plug-in for correct login you should use this link: http://mysite.com/administrator/?keyname=keyvalue
-
 ## Vote
 If you found this plugin useful, please visit our page on [JED](http://extensions.joomla.org/extensions/extension/search-a-indexing/tags-a-clouds/mytags) and post reply. Thank you!
