@@ -3,11 +3,11 @@
 *
 * MyTags shows tags for article, taking them from keywords of article
 *
-* Copyright (C) 2008-2016 Denis Mokhin. All rights reserved. 
+* Copyright (C) 2008-2017 Denis Mokhin. All rights reserved. 
 *
 * Author is:
 * Denis Mokhin < denis@mokhin-tech.ru >
-* http://mokhin-tech.ru
+* http://mokhin-tech.ru/mytags
 *
 * @license GNU GPL, see http://www.gnu.org/licenses/gpl-2.0.html
 * 
@@ -83,6 +83,8 @@ class plgContentMyTags extends JPlugin
 		$add_nofollow =	(int)$this->params->get('add_nofollow',0);
 		$limit = 		(int)$this->params->get('limit',0);
 		$sep =				 $this->params->get('sep',' ');
+		$plg_class_sfx =	 $this->params->get('plg_class_sfx','');
+		$link_class_sfx =	 $this->params->get('link_class_sfx','');
 		$is_end_space =	(int)$this->params->get('add_space_after_sep',0);
 		$com2use = 		(int)$this->params->get('using_component',0);				
 		
@@ -104,7 +106,7 @@ class plgContentMyTags extends JPlugin
 			$tag_r=preg_split("/\s*,+\s*/", $tags->metakey,-1,PREG_SPLIT_NO_EMPTY);
 			if(count($tag_r)==0)
 				continue;
-			$html.= "<div class=\"plg_my_tags\">" . JText::_( 'PLG_CONTENT_MYTAGS_TAGS'  ) . ": ";
+			$html.= "<div class=\"plg_my_tags".$plg_class_sfx."\">" . JText::_( 'PLG_CONTENT_MYTAGS_TAGS'  );
 			$i=1;
 			if($add_nofollow==1)
 				$html.="<noindex>";
@@ -120,10 +122,12 @@ class plgContentMyTags extends JPlugin
 					$url=JRoute::_("index.php?option=com_search&searchword=".$tag."&searchphrase=exact&ordering=newest");								
 				else
 					$url=JRoute::_("index.php?option=com_finder&q=".$tag);
-
-				$html.="<a href=\"".$url."\" title=\"".JText::_( 'PLG_CONTENT_MYTAGS_TAG'  ).": ".$tag."\"";					
+                
+                $html.="<a href=\"".$url."\" title=\"".JText::_( 'PLG_CONTENT_MYTAGS_TAG'  ).": ".$tag."\"";					
 				if($add_nofollow==1)				
-					$html.=" rel=\"nofollow\"";			
+					$html.=" rel=\"nofollow\"";
+                if($link_class_sfx)
+                    $html.=" class=\"".$link_class_sfx."\"";
 				$html.=">".$tag."</a>";					
 				$i++;
 			}	

@@ -4,15 +4,14 @@
 	<author>Denis Mokhin</author>
 	<authorUrl>http://mokhin-tech.ru</authorUrl>
 	<creationDate>August 2008</creationDate>
-	<copyright>Copyright (C) 2008-2016 Denis Mokhin - All rights reserved.</copyright>
+	<copyright>Copyright (C) 2008-2017 Denis Mokhin - All rights reserved.</copyright>
 	<license>GNU GPL, see http://www.gnu.org/licenses/gpl-2.0.html</license>
 	<authorEmail>denis@mokhin-tech.ru</authorEmail>
-  	<version>0.11</version>
+  	<version>0.12</version>
 	<description>PLG_CONTENT_MYTAGS_XML_DESCRIPTION</description>
 	<files>
 		<filename plugin="mytags">README.md</filename>
-		<filename plugin="mytags">mytags.php</filename>
-		<filename>index.html</filename>
+		<filename plugin="mytags">mytags.php</filename>		
 	</files>
 	<languages folder="language">
 		<language tag="ru-RU">ru-RU/ru-RU.plg_content_mytags.ini</language>
@@ -37,9 +36,17 @@
 				<option value="0">PLG_CONTENT_MYTAGS_COM_SEARCH</option>
 				<option value="1">PLG_CONTENT_MYTAGS_COM_FINDER</option>
 			</field>		
-			<field name="sep"  type="text" default="," size="5"
+			<field name="sep"  type="text" default=", " size="5"
 				label="PLG_CONTENT_MYTAGS_SEPARATOR_LABEL" 
 				description="PLG_CONTENT_MYTAGS_SEPARATOR_DESC" 
+			/>
+            <field name="plg_class_sfx"  type="text" default="" size="25"
+				label="PLG_CONTENT_MYTAGS_PLG_CLASS_SFX_LABEL" 
+				description="PLG_CONTENT_MYTAGS_PLG_CLASS_SFX_DESC" 
+			/>
+			<field name="link_class_sfx"  type="text" default="" size="25"
+				label="PLG_CONTENT_MYTAGS_LINK_CLASS_SFX_LABEL" 
+				description="PLG_CONTENT_MYTAGS_LINK_CLASS_SFX_DESC" 
 			/>
 			<field name="add_space_after_sep" type="list" default="0"
 				label="PLG_CONTENT_MYTAGS_ADD_END_SPACE_LABEL"
