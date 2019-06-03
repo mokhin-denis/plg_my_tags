@@ -3,13 +3,13 @@
 *
 * MyTags shows tags for article, taking them from keywords of article
 *
-* Copyright (C) 2008-2018 Denis Mokhin. All rights reserved. 
+* Copyright (C) 2008-2019 Denis Mokhin. All rights reserved. 
 *
 * Author is:
 * Denis Mokhin < denis@mokhin-tech.ru >
-* http://mokhin-tech.ru/mytags
+* https://mokhin-tech.ru/mytags
 *
-* @license GNU GPL, see http://www.gnu.org/licenses/gpl-2.0.html
+* @license GNU GPL, visit http://www.gnu.org/licenses/gpl-2.0.html or see LICENSE.txt
 * 
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public License
@@ -25,8 +25,6 @@
 
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
-
-jimport( 'joomla.plugin.plugin' );
 
 class plgContentMyTags extends JPlugin
 {
@@ -63,7 +61,7 @@ class plgContentMyTags extends JPlugin
 	* @since	1.6
 	*/
 	public function onContentBeforeDisplay($context, &$row, &$params, $page=0)
-	{
+	{        
 		if(empty($row->id))
 			return "";
 		if ($context == 'com_finder.indexer') {
@@ -90,7 +88,7 @@ class plgContentMyTags extends JPlugin
 		
 		$end_space_symb=($is_end_space==1)?' ':'';
 		
-		$db = JFactory::getDbo();
+		$db = \JFactory::getDbo();
 		$result	= null;
 		$query=$db->getQuery(true);
 		$query->select('metakey');
@@ -128,7 +126,7 @@ class plgContentMyTags extends JPlugin
 					$html.=" rel=\"nofollow\"";
                 if($link_class_sfx)
                     $html.=" class=\"".$link_class_sfx."\"";
-				$html.=">".$tag."</a>";					
+				$html.=">".$tag."</a>";
 				$i++;
 			}	
 		

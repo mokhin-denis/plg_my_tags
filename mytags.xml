@@ -2,15 +2,16 @@
 <extension version="3.0" type="plugin" group="content" method="upgrade">
 	<name>plg_content_mytags</name>
 	<author>Denis Mokhin</author>
-	<authorUrl>http://mokhin-tech.ru</authorUrl>
+	<authorUrl>https://mokhin-tech.ru</authorUrl>
 	<creationDate>August 2008</creationDate>
-	<copyright>Copyright (C) 2008-2018 Denis Mokhin - All rights reserved.</copyright>
-	<license>GNU GPL, see http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<copyright>Copyright (C) 2008-2019 Denis Mokhin - All rights reserved.</copyright>
+	<license>GNU GPL, please visit http://www.gnu.org/licenses/gpl-2.0.html or see LICENSE.txt</license>
 	<authorEmail>denis@mokhin-tech.ru</authorEmail>
-  	<version>0.13</version>
+  	<version>0.14</version>
 	<description>PLG_CONTENT_MYTAGS_XML_DESCRIPTION</description>
 	<files>
 		<filename>README.md</filename>
+		<filename>LICENSE.txt</filename>
 		<filename plugin="mytags">mytags.php</filename>
         <folder>language</folder>
 	</files>
@@ -65,6 +66,6 @@
 		</fields>
 	</config>
 	<updateservers>
-		<server type="extension" name="MyTags Updates">http://update.mokhin-tech.ru/mytags.xml</server>
+		<server type="extension" name="MyTags Updates">https://update.mokhin-tech.ru/mytags.xml</server>
 	</updateservers>
 </extension>
